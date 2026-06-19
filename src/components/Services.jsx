@@ -14,7 +14,7 @@ const services = [
     icon: Droplet,
     title: 'Installations',
     desc: 'New fittings, fixtures, hot water systems, and full bathroom plumbing done right the first time.',
-    img: 'https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=700&q=70&fit=crop',
+    img: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=700&q=70&fit=crop',
     accent: 'Hot Water · Bathrooms · Fixtures',
   },
   {
@@ -28,7 +28,7 @@ const services = [
     icon: Zap,
     title: 'Emergency Call-Outs',
     desc: 'Burst pipe at 11pm? Greg answers the phone. Fast response when it actually matters — no call centre.',
-    img: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=700&q=70&fit=crop',
+    img: 'https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=700&q=70&fit=crop',
     accent: '24/7 · Fast Response',
   },
 ]
