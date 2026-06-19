@@ -5,7 +5,7 @@ const HERO_IMAGES = [
   'https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=1800&q=85&fit=crop',
   'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1800&q=85&fit=crop',
   'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1800&q=85&fit=crop',
-  'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=1800&q=85&fit=crop',
+  'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=1800&q=85&fit=crop',
 ]
 
 const stagger = {
@@ -61,17 +61,14 @@ export default function Hero() {
         />
       </AnimatePresence>
 
-      {/* ── Gradient overlay (multiple layers for depth) ── */}
+      {/* ── Gradient overlay ── */}
       <motion.div
+        className="hero-overlay"
         style={{
           position: 'absolute',
           inset: 0,
           zIndex: 1,
           opacity: overlayOpacity,
-          background: `
-            linear-gradient(to right, rgba(7,17,28,0.98) 0%, rgba(7,17,28,0.75) 55%, rgba(7,17,28,0.3) 100%),
-            linear-gradient(to top, rgba(7,17,28,0.9) 0%, transparent 50%)
-          `,
         }}
       />
 
@@ -213,12 +210,13 @@ export default function Hero() {
           {/* CTAs */}
           <motion.div
             variants={fadeUp}
-            style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}
+            className="hero-ctas"
+            style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}
           >
-            <a href="tel:02108357290" className="btn-primary" style={{ fontSize: '16px', padding: '16px 36px' }}>
+            <a href="tel:02108357290" className="btn-primary hero-cta-primary" style={{ fontSize: '16px', padding: '16px 32px' }}>
               Call Greg — 0210 835 7290
             </a>
-            <a href="#services" className="btn-outline" style={{ fontSize: '15px' }}>
+            <a href="#services" className="btn-outline hero-cta-outline" style={{ fontSize: '15px' }}>
               Our Services
             </a>
           </motion.div>
@@ -251,8 +249,26 @@ export default function Hero() {
       </motion.div>
 
       <style>{`
-        @media (max-width: 560px) {
+        /* Desktop overlay — left-to-right fade so image shows on right */
+        .hero-overlay {
+          background:
+            linear-gradient(to right, rgba(7,17,28,0.97) 0%, rgba(7,17,28,0.72) 50%, rgba(7,17,28,0.28) 100%),
+            linear-gradient(to top, rgba(7,17,28,0.85) 0%, transparent 45%);
+        }
+        /* Mobile overlay — uniform dark so text is always readable */
+        @media (max-width: 640px) {
+          .hero-overlay {
+            background: rgba(7,17,28,0.78) !important;
+          }
           #hero .container > div { max-width: 100% !important; }
+          .hero-ctas { flex-direction: column !important; }
+          .hero-cta-primary,
+          .hero-cta-outline {
+            width: 100% !important;
+            justify-content: center !important;
+            font-size: 15px !important;
+            padding: 14px 20px !important;
+          }
         }
       `}</style>
     </section>

@@ -32,7 +32,7 @@ export default function Footer() {
             <p style={{ fontSize: '14px', color: 'var(--text-muted)', maxWidth: '300px', lineHeight: 1.65 }}>
               Registered Certifying Plumber · Greg Keth · Serving Mission Bay &amp; wider Auckland, New Zealand.
             </p>
-            <div style={{ marginTop: '20px', display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
+            <div className="footer-links" style={{ marginTop: '20px', display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
               {['Repairs', 'Installations', 'Maintenance', 'Emergencies'].map(s => (
                 <a key={s} href="#services" style={{ fontSize: '13px', color: 'var(--text-dim)', fontWeight: 500, transition: 'color 0.2s' }}
                   onMouseEnter={e => e.target.style.color = 'var(--accent)'}
