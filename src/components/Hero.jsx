@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion'
 
 const HERO_IMAGES = [
-  'https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=1800&q=85&fit=crop',
+  'https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=1800&q=85&fit=crop',
   'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1800&q=85&fit=crop',
   'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1800&q=85&fit=crop',
   'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=1800&q=85&fit=crop',
